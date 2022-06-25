@@ -68,15 +68,15 @@
 
 #### Backup a container
 
-docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH
+- docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH
 
 #### Restore container from backup
 
-docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"
+- docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"
 
 #### Networking
 
-docker run --name netshoot --rm -it nicolaka/netshoot /bin/bash
+- docker run --name netshoot --rm -it nicolaka/netshoot /bin/bash
 
 ``
 
